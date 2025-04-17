@@ -11,6 +11,8 @@ int main()
     float area;
     float grossDomesticProduct;
     int numberOfTouristAttractions;
+    float populationDensity;
+    float gdpPerCapita;
 
     char stateCodeTwo;
     int cityCodeTwo;
@@ -19,6 +21,8 @@ int main()
     float areaTwo;
     float grossDomesticProductTwo;
     int numberOfTouristAttractionsTwo;
+    float populationDensityTwo;
+    float gdpPerCapitaTwo;
 
     const char SEPARATOR[] = "\n-------------------------------------------------------\n\n";
 
@@ -70,6 +74,12 @@ int main()
     scanf("%d", &numberOfTouristAttractionsTwo);
     printf("%s", SEPARATOR);
 
+    // CALCULATIONS FOR POPULATION DENSITY AND GDP PER CAPITA
+    populationDensity = (float)population / area;
+    populationDensityTwo = (float)populationTwo / areaTwo;
+    gdpPerCapita = (float)grossDomesticProduct / population;
+    gdpPerCapitaTwo = (float)grossDomesticProductTwo / populationTwo;
+
     // FIRST CARD OUTPUT
     printf("Carta I \n");
     printf("Estado: %c \n", stateCode);
@@ -79,6 +89,8 @@ int main()
     printf("Área: %.2f km² \n", area);
     printf("PIB: %.2f bilhões de reais \n", grossDomesticProduct);
     printf("Número de Pontos Turísticos: %i \n", numberOfTouristAttractions);
+    printf("Densidade Populacional: %.2f hab/km² \n", populationDensity);
+    printf("PIB per Capita: %.2f reais \n", gdpPerCapita);
     printf("%s", SEPARATOR);
 
     // SECOND CARD OUTPUT
@@ -90,6 +102,8 @@ int main()
     printf("Área: %.2f km² \n", areaTwo);
     printf("PIB: %.2f bilhões de reais \n", grossDomesticProductTwo);
     printf("Número de Pontos Turísticos: %i \n", numberOfTouristAttractionsTwo);
+    printf("Densidade Populacional: %.2f hab/km² \n", populationDensityTwo);
+    printf("PIB per Capita: %.2f reais \n", gdpPerCapitaTwo);
     printf("%s", SEPARATOR);
 
     return 0;
